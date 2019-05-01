@@ -276,6 +276,7 @@ class ReplayActor(object):
                     self.replay_buffers[policy_id].add(
                         row["obs"], row["actions"], row["rewards"],
                         row["new_obs"], row["dones"], row["weights"])
+                    print("row.weights,", row["weights"])
         self.num_added += batch.count
 
     def replay(self):
